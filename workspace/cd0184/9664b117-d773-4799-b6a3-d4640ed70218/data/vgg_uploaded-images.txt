@@ -1,0 +1,80 @@
+Command Line Arguments:
+     dir = uploaded_images/ 
+    arch = vgg 
+ dogfile = dognames.txt
+
+Pet Image Label Dictionary has 4 key-value pairs.
+Below are 4 of them:
+ 1 key:                     Dog_02.jpg  label:                        dog
+ 2 key:                     Cup_01.jpg  label:                        cup
+ 3 key:                     Dog_01.jpg  label:                        dog
+ 4 key:                 Buffalo_01.jpg  label:                    buffalo
+
+     MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                            cup
+
+                Buffalo_01.jpg: 
+Real:                    buffalo   Classifier: water buffalo, water ox, asiatic buffalo, bubalus bubalis
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: indri, indris, indri indri, indri brevicaudatus
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               miniature poodle
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+     MATCH:
+
+                    Cup_01.jpg: 
+Real:                        cup   Classifier:                            cup  
+PetLabelDog: 0  ClassLabelDog: 0
+
+                Buffalo_01.jpg: 
+Real:                    buffalo   Classifier: water buffalo, water ox, asiatic buffalo, bubalus bubalis  
+PetLabelDog: 0  ClassLabelDog: 0
+
+ NOT A MATCH:
+
+                    Dog_02.jpg: 
+Real:                        dog   Classifier: indri, indris, indri indri, indri brevicaudatus  
+PetLabelDog: 1  ClassLabelDog: 0
+
+                    Dog_01.jpg: 
+Real:                        dog   Classifier:               miniature poodle  
+PetLabelDog: 1  ClassLabelDog: 1
+
+# Total Images 4 # Matches: 2 # NOT Matches: 2
+
+ ** Statistics from calculates_results_stats() function:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+ ** Check Statistics - calculated from this function as a check:
+N Images:  4  N Dog Images:  2  N NotDog Images:  2 
+Pct Corr dog:  50.0 Pct Corr NOTdog: 100.0  Pct Corr Breed:   0.0
+
+
+*** Results Summary for CNN Model Architecture VGG ***
+N Images            :   4
+N Dog Images        :   2
+N Not-Dog Images    :   2
+ 
+Percent correct_dogs:  50.0%
+Percent correct_notdogs: 100.0%
+Percent correct_breed:   0.0%
+Percent label_matches:  50.0%
+
+
+INCORRECT Dog/Not Dog Classifications:
+Pet Label:                  dog   Classifier Label: indri, indris, indri indri, indri brevicaudatus
+
+
+INCORRECT Dog Breed Classifications:
+Pet Label:                  dog   Classifier Label:               miniature poodle
+
+** Total Elapsed Runtime: 0:0:6
